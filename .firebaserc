@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ng-arab": {
+      "hosting": {
+        "user": [
+          "ng-arab"
+        ]
+      }
+    }
+  }
+}

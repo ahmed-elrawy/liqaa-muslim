@@ -47,8 +47,13 @@
             "polyfills": "apps/user/src/polyfills.ts",
             "tsConfig": "apps/user/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/user/src/favicon.ico", "apps/user/src/assets"],
-            "styles": ["apps/user/src/styles.scss"],
+            "assets": [
+              "apps/user/src/favicon.ico",
+              "apps/user/src/assets"
+            ],
+            "styles": [
+              "apps/user/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -113,7 +118,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/user"],
+          "outputs": [
+            "coverage/apps/user"
+          ],
           "options": {
             "jestConfig": "apps/user/jest.config.js",
             "passWithNoTests": true
@@ -125,7 +132,23 @@
             "outputPath": "dist/user/server",
             "main": "apps/user/server.ts",
             "tsConfig": "apps/user/tsconfig.server.json",
-            "inlineStyleLanguage": "scss"
+            "inlineStyleLanguage": "scss",
+            "externalDependencies": [
+              "firebase",
+              "@firebase/app",
+              "@firebase/analytics",
+              "@firebase/auth",
+              "@firebase/component",
+              "@firebase/database",
+              "@firebase/firestore",
+              "@firebase/functions",
+              "@firebase/installations",
+              "@firebase/messaging",
+              "@firebase/storage",
+              "@firebase/performance",
+              "@firebase/remote-config",
+              "@firebase/util"
+            ]
           },
           "configurations": {
             "production": {
@@ -175,6 +198,12 @@
             }
           },
           "defaultConfiguration": "production"
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "ssr": true
+          }
         }
       }
     },
@@ -199,7 +228,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/user-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/user-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
