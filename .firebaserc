@@ -6,6 +6,24 @@
           "ng-arab"
         ]
       }
+    },
+    "admin-tst": {
+      "hosting": {
+        "admin": [
+          "admin-tst"
+        ]
+      }
+    },
+    "admin-ng-arab": {
+      "hosting": {
+        "admin": [
+          "admin-ng-arab"
+        ]
+      }
     }
+  },
+  "projects": {
+    "admin-production": "admin-ng-arab",
+    "admin-testing": "admin-tst"
   }
 }

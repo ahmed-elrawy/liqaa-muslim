@@ -3,9 +3,7 @@
     {
       "target": "user",
       "public": "dist\\user\\dist\\user\\browser",
-      "ignore": [
-        "**/.*"
-      ],
+      "ignore": ["**/.*"],
       "headers": [
         {
           "source": "*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].+(css|js)",
@@ -21,6 +19,17 @@
         {
           "source": "**",
           "function": "ssr"
+        }
+      ]
+    },
+    {
+      "target": "admin",
+      "public": "dist/apps/admin",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
         }
       ]
     }
