@@ -7,6 +7,13 @@
         ]
       }
     },
+    "user-tst": {
+      "hosting": {
+        "user": [
+          "user-tst"
+        ]
+      }
+    },
     "admin-tst": {
       "hosting": {
         "admin": [
@@ -24,6 +31,8 @@
   },
   "projects": {
     "admin-production": "admin-ng-arab",
-    "admin-testing": "admin-tst"
+    "admin-testing": "admin-tst",
+    "user-testing": "user-tst",
+    "user-production": "ng-arab"
   }
 }
