@@ -16,6 +16,9 @@ jobs:
       - name: Install CI dependencies
         run: npm ci
 
+      - name: Echo NX Version
+        run: echo nx version
+
       # - name: checkout
       #   uses: FirebaseExtended/action-hosting-deploy@v0
       #   with:
