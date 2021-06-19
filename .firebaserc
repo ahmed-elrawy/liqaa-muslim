@@ -33,6 +33,7 @@
     "admin-production": "admin-ng-arab",
     "admin-testing": "admin-tst",
     "user-testing": "user-tst",
-    "user-production": "ng-arab"
+    "user-production": "ng-arab",
+    "default": "admin-ng-arab"
   }
 }
