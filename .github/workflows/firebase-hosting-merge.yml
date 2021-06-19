@@ -13,8 +13,8 @@ jobs:
       - name: Checkout repository (#2)
         uses: actions/checkout@v2
 
-      - name: Checkout repository (#2)
-        run: npm ci && ng run build
+      - name: Install CI dependencies
+        run: npm ci
 
       # - name: checkout
       #   uses: FirebaseExtended/action-hosting-deploy@v0
