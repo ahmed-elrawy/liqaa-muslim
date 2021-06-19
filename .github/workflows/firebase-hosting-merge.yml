@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+      - name: checkout
         run: npm ci && ng run build
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
