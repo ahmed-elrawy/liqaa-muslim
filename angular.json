@@ -200,9 +200,7 @@
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
-            "commands": [
-              "npx firebase use user-testing & npm run build:ssr & npx firebase deploy --only functions,hosting:user "
-            ]
+            "commands": ["npx firebase use user-testing"]
           }
         }
       }
@@ -324,9 +322,7 @@
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
-            "commands": [
-              "npx firebase use admin-testing & nx build admin & npx firebase deploy --only hosting:admin "
-            ]
+            "commands": ["npx firebase use admin-testing"]
           }
         },
         "deploy-production": {
