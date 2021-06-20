@@ -201,7 +201,7 @@
           "outputs": [],
           "options": {
             "commands": [
-              "npx firebase use user-testing --token '1//03OMGL8jZY9q1CgYIARAAGAMSNwF-L9Irg3gpVnlxnqlPIhwUSEvzD7VbR8qqcMIEg6YTvbocm0R1yjmcuXzeALRex-M2W2q2ppk' & npm run build:ssr & npx firebase deploy --only functions,hosting:user --token '1//03OMGL8jZY9q1CgYIARAAGAMSNwF-L9Irg3gpVnlxnqlPIhwUSEvzD7VbR8qqcMIEg6YTvbocm0R1yjmcuXzeALRex-M2W2q2ppk'"
+              "npx firebase use user-testing & npm run build:ssr & npx firebase deploy --only functions,hosting:user "
             ]
           }
         }
@@ -325,7 +325,7 @@
           "outputs": [],
           "options": {
             "commands": [
-              "npx firebase use admin-testing --token '1//03OMGL8jZY9q1CgYIARAAGAMSNwF-L9Irg3gpVnlxnqlPIhwUSEvzD7VbR8qqcMIEg6YTvbocm0R1yjmcuXzeALRex-M2W2q2ppk' & nx build admin & npx firebase deploy --only hosting:admin --token '1//03OMGL8jZY9q1CgYIARAAGAMSNwF-L9Irg3gpVnlxnqlPIhwUSEvzD7VbR8qqcMIEg6YTvbocm0R1yjmcuXzeALRex-M2W2q2ppk'"
+              "npx firebase use admin-testing & nx build admin & npx firebase deploy --only hosting:admin "
             ]
           }
         },
@@ -334,7 +334,7 @@
           "outputs": [],
           "options": {
             "commands": [
-              "npx firebase use admin-production --token '1//03OMGL8jZY9q1CgYIARAAGAMSNwF-L9Irg3gpVnlxnqlPIhwUSEvzD7VbR8qqcMIEg6YTvbocm0R1yjmcuXzeALRex-M2W2q2ppk' & nx build admin & npx firebase deploy --only hosting:admin --token '1//03OMGL8jZY9q1CgYIARAAGAMSNwF-L9Irg3gpVnlxnqlPIhwUSEvzD7VbR8qqcMIEg6YTvbocm0R1yjmcuXzeALRex-M2W2q2ppk'"
+              "npx firebase use admin-production & nx build admin & npx firebase deploy --only hosting:admin "
             ]
           }
         }
