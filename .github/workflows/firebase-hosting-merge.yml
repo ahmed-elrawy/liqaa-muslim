@@ -16,7 +16,10 @@ jobs:
       - name: Install CI dependencies
         run: npm ci
 
-      - name: Echo NX Version
+      - name: NX Action
+        uses: mansagroup/nrwl-nx-action@v2
+        with:
+          targets: lint,build,deploy
         run: nx version
 
       # - name: checkout
