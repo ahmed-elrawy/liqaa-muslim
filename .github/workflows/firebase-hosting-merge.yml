@@ -20,7 +20,7 @@ jobs:
         uses: mansagroup/nrwl-nx-action@v2
         with:
           targets: lint,build,deploy
-        run: nx version
+        # run: nx version
 
       # - name: checkout
       #   uses: FirebaseExtended/action-hosting-deploy@v0
