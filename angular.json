@@ -202,7 +202,7 @@
           "outputs": [],
           "options": {
             "commands": [
-              "npx firebase use user-testing --token {args.FIREBASE_TOKEN} && npm run build:ssr && ls ../ && npx firebase deploy --only functions,hosting:user --token {args.FIREBASE_TOKEN}"
+              "npx firebase use user-testing --token {args.FIREBASE_TOKEN} && npm run build:ssr && ls -a && npx firebase deploy --only functions,hosting:user --token {args.FIREBASE_TOKEN}"
             ]
           }
         }
