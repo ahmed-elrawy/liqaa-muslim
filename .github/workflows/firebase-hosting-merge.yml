@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
-        run: npm ci && npx firebase login:ci --token "1//03OMGL8jZY9q1CgYIARAAGAMSNwF-L9Irg3gpVnlxnqlPIhwUSEvzD7VbR8qqcMIEg6YTvbocm0R1yjmcuXzeALRex-M2W2q2ppk"
+        run: npm ci && firebase use admin-testing --token "1//03OMGL8jZY9q1CgYIARAAGAMSNwF-L9Irg3gpVnlxnqlPIhwUSEvzD7VbR8qqcMIEg6YTvbocm0R1yjmcuXzeALRex-M2W2q2ppk"
 
       - name: Nrwl Nx
         uses: MansaGroup/nrwl-nx-action@v2.0.4
