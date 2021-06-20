@@ -196,6 +196,15 @@
             "ssr": true
           }
         },
+        "testing": {
+          "builder": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "commands": [
+              "npx firebase use user-testing --token '${{ secrets.FIREBASE_TOKEN }}'"
+            ]
+          }
+        },
         "deploy-testing": {
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
@@ -318,6 +327,15 @@
           "options": {
             "jestConfig": "apps/admin/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "testing": {
+          "builder": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "commands": [
+              "npx firebase use user-testing --token '${{ secrets.FIREBASE_TOKEN }}'"
+            ]
           }
         },
         "deploy-testing": {

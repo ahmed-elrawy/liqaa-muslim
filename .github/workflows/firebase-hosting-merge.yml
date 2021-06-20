@@ -16,12 +16,12 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
-        run: npx firebase use admin-testing --token '${{ secrets.FIREBASE_TOKEN }}' && npm ci
+        run: npm ci
 
       - name: Nrwl Nx
         uses: MansaGroup/nrwl-nx-action@v2.0.4
         with:
-          targets: deploy-testing
+          targets: testing
         # run: nx version
 
       # - name: checkout
