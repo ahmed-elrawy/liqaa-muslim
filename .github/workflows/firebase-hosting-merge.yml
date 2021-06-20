@@ -23,12 +23,12 @@ jobs:
         with:
           targets: deploy-testing
           args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}}
-        # run: nx version
 
-      # - name: checkout
-      #   uses: FirebaseExtended/action-hosting-deploy@v0
-      #   with:
-      #     repoToken: '${{ secrets.GITHUB_TOKEN }}'
-      #     firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ADMIN_TST }}'
-      #     channelId: live
-      #     projectId: admin-tst
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+          with:
+            name: my-artifact
+
+      - name: Display structure of downloaded files
+          run: ls -R
+
