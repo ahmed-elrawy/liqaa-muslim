@@ -23,11 +23,3 @@ jobs:
         with:
           targets: deploy-testing
           args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}}
-
-      - name: Download Artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: my-artifact
-
-      - name: Display structure of downloaded files
-        run: ls -R
