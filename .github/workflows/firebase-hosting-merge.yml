@@ -17,7 +17,7 @@ jobs:
         run: npm ci
 
       - name: log
-        run: ng v
+        run: rpm run ng v
 
       - name: Nrwl Nx
         uses: MansaGroup/nrwl-nx-action@v2.0.4
