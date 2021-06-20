@@ -16,8 +16,8 @@ jobs:
       - name: Install CI dependencies
         run: npm ci
 
-      - name: NX Action
-        uses: mansagroup/nrwl-nx-action@v2
+      - name: Nrwl Nx
+        uses: MansaGroup/nrwl-nx-action@v2.0.4
         with:
           targets: lint,build,deploy
         # run: nx version
