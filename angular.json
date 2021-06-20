@@ -200,7 +200,7 @@
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
-            "commands": ["npx firebase -h"]
+            "commands": ["nx affected:apps  && npx firebase use user-testing"]
           }
         },
         "deploy-testing": {
