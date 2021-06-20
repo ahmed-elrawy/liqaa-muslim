@@ -21,7 +21,7 @@ jobs:
       - name: Nrwl Nx
         uses: MansaGroup/nrwl-nx-action@v2.0.4
         with:
-          targets: testing
+          targets: testing --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}}
         # run: nx version
 
       # - name: checkout
