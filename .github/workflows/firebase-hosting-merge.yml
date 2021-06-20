@@ -15,16 +15,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install CI dependencies
+      - name: Install dependencies
         run: npm ci
-
-      - name: log
-        run: npm run ng v
 
       - name: Nrwl Nx
         uses: MansaGroup/nrwl-nx-action@v2.0.4
         with:
-          targets: build
+          targets: deploy-testing
         # run: nx version
 
       # - name: checkout
