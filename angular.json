@@ -201,7 +201,7 @@
           "outputs": [],
           "options": {
             "commands": [
-              "npx firebase use user-testing & npm run build:ssr & npx firebase deploy --only functions,hosting:user"
+              "npx firebase use user-testing && npm run build:ssr && npx firebase deploy --only functions,hosting:user"
             ]
           }
         }
