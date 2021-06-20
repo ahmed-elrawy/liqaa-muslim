@@ -19,7 +19,7 @@ jobs:
       - name: Nrwl Nx
         uses: MansaGroup/nrwl-nx-action@v2.0.4
         with:
-          targets: lint,build,deploy
+          targets: build
         # run: nx version
 
       # - name: checkout
