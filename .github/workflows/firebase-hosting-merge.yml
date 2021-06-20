@@ -20,6 +20,7 @@ jobs:
         uses: MansaGroup/nrwl-nx-action@v2.0.4
         with:
           targets: deploy-testing
+          affected: 'true'
         # run: nx version
 
       # - name: checkout
