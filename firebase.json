@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "user",
-      "public": "dist\\user\\dist\\user\\browser",
+      "public": "dist/user/dist/user/browser",
       "ignore": ["**/.*"],
       "headers": [
         {
