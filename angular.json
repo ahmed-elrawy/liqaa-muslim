@@ -196,12 +196,13 @@
             "ssr": true
           }
         },
+
         "deploy-testing": {
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
             "commands": [
-              "firebase use user-testing & npm run build:ssr & firebase deploy --only functions,hosting:user"
+              "npx firebase use user-testing --token {args.FIREBASE_TOKEN} && npm run build:ssr && node copy-angular-app && ls dist -R && npx firebase deploy --only functions,hosting:user --token {args.FIREBASE_TOKEN}"
             ]
           }
         }
@@ -320,12 +321,13 @@
             "passWithNoTests": true
           }
         },
+
         "deploy-testing": {
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
             "commands": [
-              "firebase use admin-testing & nx build admin & firebase deploy --only hosting:admin"
+              "npx firebase use admin-testing --token {args.FIREBASE_TOKEN} && nx build admin && npx firebase deploy --only hosting:admin --token {args.FIREBASE_TOKEN}"
             ]
           }
         },
@@ -334,7 +336,7 @@
           "outputs": [],
           "options": {
             "commands": [
-              "firebase use admin-production & nx build admin & firebase deploy --only hosting:admin"
+              "npx firebase use admin-production --token {args.FIREBASE_TOKEN} && nx build admin && npx firebase deploy --only hosting:admin --token {args.FIREBASE_TOKEN}"
             ]
           }
         }
