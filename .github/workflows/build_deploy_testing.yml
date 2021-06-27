@@ -5,7 +5,7 @@ name: Build & Deploy To Firebase "Testing Environment"
 'on':
   pull_request:
     branches:
-      - main
+      - tst
 jobs:
   build_deploy_production:
     runs-on: ubuntu-latest
@@ -21,5 +21,5 @@ jobs:
       - name: Nrwl Nx
         uses: MansaGroup/nrwl-nx-action@v2.0.4
         with:
-          targets: deploy-production
+          targets: deploy-testing
           args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}}
