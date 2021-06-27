@@ -8,7 +8,7 @@ name: Build & Deploy To Firebase "Testing & Production Environments"
       - main
       - tst
 jobs:
-  build_deploy_production:
+  build_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository (#2)
@@ -19,13 +19,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Nrwl Nx
+      - name: Nrwl Nx Production
         uses: MansaGroup/nrwl-nx-action@v2.0.4
         if: github.ref == 'refs/heads/main'
         with:
           targets: deploy
           args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}} --ENV=production
 
+      - name: Nrwl Nx Testing
         if: github.ref == 'refs/heads/tst'
         with:
           targets: deploy
