@@ -27,6 +27,7 @@ jobs:
           args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}} --ENV=production
 
       - name: Nrwl Nx Testing
+        uses: MansaGroup/nrwl-nx-action@v2.0.4
         if: github.ref == 'refs/heads/tst'
         with:
           targets: deploy
