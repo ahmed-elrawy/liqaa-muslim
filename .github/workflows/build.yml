@@ -7,6 +7,8 @@ name: Build Affected Projects
     branches:
       - main
       - tst
+  push:
+    branches:
       - dev
 jobs:
   build_deploy:
