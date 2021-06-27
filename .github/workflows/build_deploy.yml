@@ -5,7 +5,8 @@ name: Build & Deploy To Firebase "Testing & Production Environments"
 'on':
   pull_request:
     branches:
-      - [main, tst]
+      - main
+      - tst
 jobs:
   build_deploy_production:
     runs-on: ubuntu-latest
