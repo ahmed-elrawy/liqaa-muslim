@@ -1,6 +1,8 @@
-# Ng Arab 3
+# Ng Arab 4
 
 [![Build Affected Projects](https://github.com/NgArab/NgArab/actions/workflows/build.yml/badge.svg?branch=dev)](https://github.com/NgArab/NgArab/actions/workflows/build.yml)
+
+[![Deploy Affected Projects To Firebase](https://github.com/NgArab/NgArab/actions/workflows/deploy.yml/badge.svg?branch=tst)](https://github.com/NgArab/NgArab/actions/workflows/deploy.yml)
 
 This project was generated using [Nx](https://nx.dev).
 
