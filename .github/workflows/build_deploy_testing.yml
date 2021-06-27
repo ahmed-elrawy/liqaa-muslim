@@ -7,7 +7,7 @@ name: Build & Deploy To Firebase "Testing Environment"
     branches:
       - tst
 jobs:
-  build_deploy_production:
+  build_deploy_testing:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository (#2)

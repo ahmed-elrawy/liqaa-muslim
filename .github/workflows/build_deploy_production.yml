@@ -7,7 +7,7 @@ name: Build & Deploy To Firebase "Production Environment"
     branches:
       - main
 jobs:
-  build_deploy_testing:
+  build_deploy_production:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository (#2)
