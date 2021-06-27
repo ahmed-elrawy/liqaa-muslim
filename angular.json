@@ -190,22 +190,12 @@
           },
           "defaultConfiguration": "production"
         },
-        "deploy-production": {
+        "deploy": {
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
             "commands": [
-              "npx firebase use user-production --token {args.FIREBASE_TOKEN} && npm run build:ssr && node copy-angular-app && npx firebase deploy --only functions,hosting:user --token {args.FIREBASE_TOKEN}"
-            ]
-          }
-        },
-
-        "deploy-testing": {
-          "builder": "@nrwl/workspace:run-commands",
-          "outputs": [],
-          "options": {
-            "commands": [
-              "npx firebase use user-testing --token {args.FIREBASE_TOKEN} && npm run build:ssr && node copy-angular-app && npx firebase deploy --only functions,hosting:user --token {args.FIREBASE_TOKEN}"
+              "npx firebase use user-{args.ENV} --token {args.FIREBASE_TOKEN} && npm run build:ssr && node copy-angular-app && npx firebase deploy --only functions,hosting:user --token {args.FIREBASE_TOKEN}"
             ]
           }
         }
@@ -325,21 +315,12 @@
           }
         },
 
-        "deploy-testing": {
+        "deploy": {
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
             "commands": [
-              "npx firebase use admin-testing --token {args.FIREBASE_TOKEN} && nx build admin && npx firebase deploy --only hosting:admin --token {args.FIREBASE_TOKEN}"
-            ]
-          }
-        },
-        "deploy-production": {
-          "builder": "@nrwl/workspace:run-commands",
-          "outputs": [],
-          "options": {
-            "commands": [
-              "npx firebase use admin-production --token {args.FIREBASE_TOKEN} && nx build admin && npx firebase deploy --only hosting:admin --token {args.FIREBASE_TOKEN}"
+              "npx firebase use admin-{args.ENV} --token {args.FIREBASE_TOKEN} && nx build admin && npx firebase deploy --only hosting:admin --token {args.FIREBASE_TOKEN}"
             ]
           }
         }
