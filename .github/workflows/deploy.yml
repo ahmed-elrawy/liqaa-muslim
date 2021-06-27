@@ -21,14 +21,14 @@ jobs:
 
       - name: Nrwl Nx Production
         uses: MansaGroup/nrwl-nx-action@v2.0.4
-        if: github.ref == 'refs/heads/main'
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           targets: deploy
           args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}} --ENV=production
 
       - name: Nrwl Nx Testing
         uses: MansaGroup/nrwl-nx-action@v2.0.4
-        if: github.ref == 'refs/heads/tst'
+        if: ${{ github.ref == 'refs/heads/tst' }}
         with:
           targets: deploy
           args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}} --ENV=testing
