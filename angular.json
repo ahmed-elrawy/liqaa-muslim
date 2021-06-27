@@ -202,7 +202,7 @@
           "outputs": [],
           "options": {
             "commands": [
-              "npx firebase use user-testing --token {args.FIREBASE_TOKEN} && npm run build:ssr && node copy-angular-app && ls dist -R && npx firebase deploy --only functions,hosting:user --token {args.FIREBASE_TOKEN}"
+              "npx firebase use user-testing --token {args.FIREBASE_TOKEN} && npm run build:ssr && node copy-angular-app && npx firebase deploy --only functions,hosting:user --token {args.FIREBASE_TOKEN}"
             ]
           }
         }
