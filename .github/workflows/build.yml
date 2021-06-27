@@ -7,9 +7,6 @@ name: Build Affected Projects
     branches:
       - main
       - tst
-  push:
-    branches:
-      - dev
 jobs:
   build:
     runs-on: ubuntu-latest
