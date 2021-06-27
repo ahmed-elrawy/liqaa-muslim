@@ -191,9 +191,10 @@
           "defaultConfiguration": "production"
         },
         "deploy-production": {
-          "builder": "@angular/fire:deploy",
+          "builder": "@nrwl/workspace:run-commands",
+          "outputs": [],
           "options": {
-            "ssr": true
+            "commands": ["ng deploy --token {args.FIREBASE_TOKEN}"]
           }
         },
 
