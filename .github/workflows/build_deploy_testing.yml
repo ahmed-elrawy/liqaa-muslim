@@ -22,4 +22,4 @@ jobs:
         uses: MansaGroup/nrwl-nx-action@v2.0.4
         with:
           targets: deploy-testing
-          args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}}
+          args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}} --ENV=testing
