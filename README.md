@@ -1,5 +1,7 @@
 # Ng Arab 3
 
+[![Build Affected Projects](https://github.com/NgArab/NgArab/actions/workflows/build.yml/badge.svg?branch=dev)](https://github.com/NgArab/NgArab/actions/workflows/build.yml)
+
 This project was generated using [Nx](https://nx.dev).
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
