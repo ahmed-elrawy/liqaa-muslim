@@ -190,6 +190,13 @@
           },
           "defaultConfiguration": "production"
         },
+        "NX-build": {
+          "builder": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "commands": ["npm run build:ssr"]
+          }
+        },
         "deploy": {
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
@@ -315,6 +322,13 @@
           }
         },
 
+        "NX-build": {
+          "builder": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "commands": ["nx build admin"]
+          }
+        },
         "deploy": {
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
