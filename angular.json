@@ -1,6 +1,7 @@
 {
   "version": 1,
   "cli": {
+    "analytics": "40c6cbc1-1c2b-465e-8578-96e570a11008",
     "defaultCollection": "@nrwl/angular"
   },
   "defaultProject": "user",
