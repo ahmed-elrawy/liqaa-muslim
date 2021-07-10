@@ -19,19 +19,27 @@
     }
   },
   "projects": {
-    "user": {
-      "tags": []
-    },
-    "user-e2e": {
-      "tags": [],
-      "implicitDependencies": ["user"]
-    },
     "admin": {
       "tags": []
     },
     "admin-e2e": {
       "tags": [],
       "implicitDependencies": ["admin"]
+    },
+    "user": {
+      "tags": []
+    },
+    "user-e2e": {
+      "tags": [],
+      "implicitDependencies": ["user"]
     }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   }
 }
