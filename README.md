@@ -118,7 +118,7 @@
 <p align="right" dir="rtl">هذا المشروع تحت رخصة [MIT License](LICENSE).</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[ng-logo]: images/ngArab-logo.png 
-[ng-about]: images/about-ngArab.png
+[ng-logo]: .github/images/ngArab-logo.png 
+[ng-about]: .github/images/about-ngArab.png
 
 
