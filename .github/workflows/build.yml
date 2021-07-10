@@ -3,7 +3,6 @@ name: Build Affected Projects
 push:
     branches:
       - dev
-
   pull_request:
     branches:
       - main
