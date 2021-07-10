@@ -7,6 +7,7 @@ name: Check Commit Message
     branches:
       - main
       - tst
+      - dev
 jobs:
   commit_check:
     runs-on: ubuntu-latest
