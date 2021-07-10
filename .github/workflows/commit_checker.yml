@@ -1,6 +1,6 @@
 name: Check Commit Message
 'on':
-push:
+  push:
     branches:
       - dev
   pull_request:

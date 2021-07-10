@@ -1,6 +1,6 @@
 name: Build Affected Projects
 'on':
-push:
+  push:
     branches:
       - dev
   pull_request:
