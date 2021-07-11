@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ng-arab-root',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'admin';
+export class AppComponent implements OnInit {
+  viewInit = false;
+  constructor() {}
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.viewInit = true;
+    }, 1000);
+  }
 }
