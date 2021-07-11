@@ -1,7 +1,7 @@
 <div class="">
   <hr />
   <br />
-  <div class="text-center controls">
+  <div class="controls">
     <button
       mat-raised-button
       color="basic"
@@ -9,7 +9,9 @@
       (click)="filterList('junior')"
     >
       Junior
-      <ng-container *ngIf="activeTableLevel === 'junior'">({{ activeTableQuestions.length }})</ng-container>
+      <ng-container *ngIf="activeTableLevel === 'junior'"
+        >({{ activeTableQuestions.length }})</ng-container
+      >
     </button>
     <button
       mat-raised-button
@@ -18,7 +20,9 @@
       (click)="filterList('mid-senior')"
     >
       Mid
-      <ng-container *ngIf="activeTableLevel === 'mid-senior'">({{ activeTableQuestions.length }})</ng-container>
+      <ng-container *ngIf="activeTableLevel === 'mid-senior'"
+        >({{ activeTableQuestions.length }})</ng-container
+      >
     </button>
     <button
       mat-raised-button
@@ -27,7 +31,9 @@
       (click)="filterList('senior')"
     >
       Senior
-      <ng-container *ngIf="activeTableLevel === 'senior'">({{ activeTableQuestions.length }})</ng-container>
+      <ng-container *ngIf="activeTableLevel === 'senior'"
+        >({{ activeTableQuestions.length }})</ng-container
+      >
     </button>
     <button
       mat-raised-button
@@ -36,7 +42,9 @@
       (click)="filterList('expert')"
     >
       Expert
-      <ng-container *ngIf="activeTableLevel === 'expert'">({{ activeTableQuestions.length }})</ng-container>
+      <ng-container *ngIf="activeTableLevel === 'expert'"
+        >({{ activeTableQuestions.length }})</ng-container
+      >
     </button>
   </div>
   <br />
@@ -82,7 +90,13 @@
             </a>
           </td>
           <td>
-            <button mat-raised-button class="active" (click)="openDialog(question.id)">Delete</button>
+            <button
+              mat-raised-button
+              class="active"
+              (click)="openDialog(question.id)"
+            >
+              Delete
+            </button>
           </td>
         </tr>
       </tbody>

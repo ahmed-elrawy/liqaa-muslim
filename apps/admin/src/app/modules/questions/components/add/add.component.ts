@@ -24,12 +24,21 @@ export class AddComponent implements OnInit, OnDestroy {
   destroyed$ = new Subject<boolean>();
   public Editor = customEditor;
   ckconfig = {
-    toolbar: ['heading', '|', 'bold', 'link', 'bulletedList', 'numberedList', 'blockQuote', 'codeBlock'],
+    toolbar: [
+      'heading',
+      '|',
+      'bold',
+      'link',
+      'bulletedList',
+      'numberedList',
+      'blockQuote',
+      'codeBlock',
+    ],
   };
 
   // edit
   editMode = false;
-  questionToEdit: Question;
+  questionToEdit!: Question;
 
   constructor(
     private actions$: Actions,
@@ -37,15 +46,29 @@ export class AddComponent implements OnInit, OnDestroy {
     private store: Store<Question>,
     private activatedRoute: ActivatedRoute
   ) {
+    this.addQuestionForm = this.fb.group({
+      question: ['', Validators.required],
+      level: ['', Validators.required],
+      resource_link: ['', Validators.required],
+      hint: ['', Validators.required],
+      question_category_id: 'bf1da3d4-ec6a-4831-8a42-8aad1da497ef',
+      status: 'active',
+      answers: this.fb.array([]),
+    });
     this.initAddQuestionForm();
   }
 
   ngOnInit(): void {
-    this.actions$.pipe(ofType(QuestionsActions.addQuestionSuccess), takeUntil(this.destroyed$)).subscribe({
-      next: (res) => {
-        this.addQuestionForm.reset(), this.initAddQuestionForm();
-      },
-    });
+    this.actions$
+      .pipe(
+        ofType(QuestionsActions.addQuestionSuccess),
+        takeUntil(this.destroyed$)
+      )
+      .subscribe({
+        next: (res) => {
+          this.addQuestionForm.reset(), this.initAddQuestionForm();
+        },
+      });
 
     const id = this.activatedRoute.snapshot.params['id'];
     if (id) {
@@ -61,15 +84,6 @@ export class AddComponent implements OnInit, OnDestroy {
   }
 
   initAddQuestionForm(): void {
-    this.addQuestionForm = this.fb.group({
-      question: ['', Validators.required],
-      level: ['', Validators.required],
-      resource_link: ['', Validators.required],
-      hint: ['', Validators.required],
-      question_category_id: 'bf1da3d4-ec6a-4831-8a42-8aad1da497ef',
-      status: 'active',
-      answers: this.fb.array([]),
-    });
     for (const [i, _] of Array(4).entries()) {
       this.getAnswers().push(
         this.fb.group({
@@ -86,7 +100,9 @@ export class AddComponent implements OnInit, OnDestroy {
     this.store.dispatch(QuestionsActions.getQuestions(questionId));
   }
   onSubmit(): void {
-    this.store.dispatch(QuestionsActions.addQuestion(this.addQuestionForm.value));
+    this.store.dispatch(
+      QuestionsActions.addQuestion(this.addQuestionForm.value)
+    );
   }
 
   onEdit(): void {

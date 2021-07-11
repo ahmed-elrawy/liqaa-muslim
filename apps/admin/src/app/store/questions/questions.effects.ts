@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { catchError, map, concatMap, tap, mergeMap } from 'rxjs/operators';
+import { catchError, map, concatMap, mergeMap } from 'rxjs/operators';
 import { of, EMPTY } from 'rxjs';
 import { Question } from '@shared/models/question';
 
@@ -18,11 +18,17 @@ export class QuestionsEffects {
       concatMap((payload: Question & { type: string }) =>
         this.apiService.post(`${environment.baseURL}/questions`, payload).pipe(
           map(() => {
-            this.alertService.alert.next({ msg: 'Added Successfuly', type: 'success' });
+            this.alertService.alert.next({
+              msg: 'Added Successfuly',
+              type: 'success',
+            });
             return QuestionsActions.addQuestionSuccess();
           }),
           catchError((error) => {
-            this.alertService.alert.next({ msg: 'There is something wrong', type: 'failed' });
+            this.alertService.alert.next({
+              msg: 'There is something wrong',
+              type: 'failed',
+            });
             return of(QuestionsActions.addQuestionFailure());
           })
         )
@@ -34,16 +40,24 @@ export class QuestionsEffects {
     return this.actions$.pipe(
       ofType(QuestionsActions.deleteQuestion),
       concatMap((payload) =>
-        this.apiService.delete(`${environment.baseURL}/questions/${payload.questionId}`).pipe(
-          map(() => {
-            this.alertService.alert.next({ msg: 'Deleted Successfuly', type: 'success' });
-            return QuestionsActions.deleteQuestionSuccess();
-          }),
-          catchError((error) => {
-            this.alertService.alert.next({ msg: 'There is something wrong', type: 'failed' });
-            return of(QuestionsActions.deleteQuestionFailure());
-          })
-        )
+        this.apiService
+          .delete(`${environment.baseURL}/questions/${payload.questionId}`)
+          .pipe(
+            map(() => {
+              this.alertService.alert.next({
+                msg: 'Deleted Successfuly',
+                type: 'success',
+              });
+              return QuestionsActions.deleteQuestionSuccess();
+            }),
+            catchError((error) => {
+              this.alertService.alert.next({
+                msg: 'There is something wrong',
+                type: 'failed',
+              });
+              return of(QuestionsActions.deleteQuestionFailure());
+            })
+          )
       )
     );
   });
@@ -53,16 +67,28 @@ export class QuestionsEffects {
       ofType(QuestionsActions.getQuestions),
       concatMap((params) => {
         return this.apiService
-          .get(`${environment.baseURL}/questions${params.questionId ? `/${params.questionId}` : ''}`)
+          .get(
+            `${environment.baseURL}/questions${
+              params.questionId ? `/${params.questionId}` : ''
+            }`
+          )
           .pipe(
-            map((payload: { questions: Question[]; status: string } | { question: Question; status: string }) => {
-              this.alertService.alert.next({ msg: 'Get Data Successfuly', type: 'success' });
+            map((payload: any) => {
+              this.alertService.alert.next({
+                msg: 'Get Data Successfuly',
+                type: 'success',
+              });
               return QuestionsActions.getQuestionsSuccess({
-                questions: params.questionId ? [payload['question']] : payload['questions'],
+                questions: params.questionId
+                  ? [payload['question']]
+                  : payload['questions'],
               });
             }),
             catchError(() => {
-              this.alertService.alert.next({ msg: 'There is something wrong', type: 'failed' });
+              this.alertService.alert.next({
+                msg: 'There is something wrong',
+                type: 'failed',
+              });
               return of(QuestionsActions.getQuestionsFailure());
             })
           );
@@ -74,18 +100,30 @@ export class QuestionsEffects {
     return this.actions$.pipe(
       ofType(QuestionsActions.editQuestion),
       mergeMap((question) => {
-        return this.apiService.put(`${environment.baseURL}/questions/${question.id}`, question).pipe(
-          map(() => {
-            this.alertService.alert.next({ msg: 'Edit Question Successfuly', type: 'success' });
-            return QuestionsActions.editQuestionSuccess();
-          }),
-          catchError(() => {
-            this.alertService.alert.next({ msg: 'There is something wrong', type: 'failed' });
-            return EMPTY;
-          })
-        );
+        return this.apiService
+          .put(`${environment.baseURL}/questions/${question.id}`, question)
+          .pipe(
+            map(() => {
+              this.alertService.alert.next({
+                msg: 'Edit Question Successfuly',
+                type: 'success',
+              });
+              return QuestionsActions.editQuestionSuccess();
+            }),
+            catchError(() => {
+              this.alertService.alert.next({
+                msg: 'There is something wrong',
+                type: 'failed',
+              });
+              return EMPTY;
+            })
+          );
       })
     );
   });
-  constructor(private actions$: Actions, private apiService: ApiService, private alertService: AlertService) {}
+  constructor(
+    private actions$: Actions,
+    private apiService: ApiService,
+    private alertService: AlertService
+  ) {}
 }
