@@ -1,9 +1,13 @@
 name: Check Commit Message
 'on':
+  push:
+    branches:
+      - dev
   pull_request:
     branches:
       - main
       - tst
+      - dev
 jobs:
   commit_check:
     runs-on: ubuntu-latest

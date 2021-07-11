@@ -1,0 +1,106 @@
+<div class="">
+  <hr />
+  <br />
+  <div class="controls">
+    <button
+      mat-raised-button
+      color="basic"
+      [class.active]="activeTableLevel === 'junior'"
+      (click)="filterList('junior')"
+    >
+      Junior
+      <ng-container *ngIf="activeTableLevel === 'junior'"
+        >({{ activeTableQuestions.length }})</ng-container
+      >
+    </button>
+    <button
+      mat-raised-button
+      color="basic"
+      [class.active]="activeTableLevel === 'mid-senior'"
+      (click)="filterList('mid-senior')"
+    >
+      Mid
+      <ng-container *ngIf="activeTableLevel === 'mid-senior'"
+        >({{ activeTableQuestions.length }})</ng-container
+      >
+    </button>
+    <button
+      mat-raised-button
+      color="basic"
+      [class.active]="activeTableLevel === 'senior'"
+      (click)="filterList('senior')"
+    >
+      Senior
+      <ng-container *ngIf="activeTableLevel === 'senior'"
+        >({{ activeTableQuestions.length }})</ng-container
+      >
+    </button>
+    <button
+      mat-raised-button
+      color="basic"
+      [class.active]="activeTableLevel === 'expert'"
+      (click)="filterList('expert')"
+    >
+      Expert
+      <ng-container *ngIf="activeTableLevel === 'expert'"
+        >({{ activeTableQuestions.length }})</ng-container
+      >
+    </button>
+  </div>
+  <br />
+  <hr />
+  <br />
+  <div class="teble-responsive">
+    <table>
+      <thead>
+        <th>Id</th>
+        <th>Category</th>
+        <th>Level</th>
+        <th>Question</th>
+        <th>Correct Answer</th>
+        <th>Wrong Answer 1</th>
+        <th>Wrong Answer 2</th>
+        <th>Wrong Answer 3</th>
+        <th>Hint</th>
+        <th>Resource</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let question of activeTableQuestions; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ question.category }}</td>
+          <td>{{ question.level }}</td>
+          <td>{{ question.question }}</td>
+          <td class="long" *ngFor="let a of getAnswer(question.answers, 1)">
+            {{ a.answer }}
+          </td>
+          <td class="long" *ngFor="let a of getAnswer(question.answers)">
+            {{ a.answer }}
+          </td>
+          <td>{{ question.hint }}</td>
+          <td>
+            <button mat-raised-button color="primary">
+              <a target="_blank" [href]="question.resource">Resource</a>
+            </button>
+          </td>
+          <td>
+            <a [routerLink]="'../edit/' + question.id">
+              <button mat-raised-button color="warn">Edit</button>
+            </a>
+          </td>
+          <td>
+            <button
+              mat-raised-button
+              class="active"
+              (click)="openDialog(question.id)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br />

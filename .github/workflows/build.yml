@@ -1,9 +1,13 @@
 name: Build Affected Projects
 'on':
+  push:
+    branches:
+      - dev
   pull_request:
     branches:
       - main
       - tst
+      - dev
 jobs:
   build:
     runs-on: ubuntu-latest
