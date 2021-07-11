@@ -115,7 +115,12 @@
 
 ## <h2 align="right" id="NG-license"> رخصة المشروع :memo: </h2>
 
-<p align="right" dir="rtl">هذا المشروع تحت رخصة [MIT License](https://github.com/NgArab/NgArab/blob/main/LICENSE).</p>
+<div align="right" dir="rtl">
+  
+ - هذا المشروع تحت رخصة [MIT License](https://github.com/NgArab/NgArab/blob/main/LICENSE).
+  
+</div>
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
