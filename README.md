@@ -1,16 +1,19 @@
- &rlm;
+&rlm;
+
  <!-- Header -->
-# <h1 align="center">  NG-Arab :heart_eyes: </h1>
- 
- 
+
+# <h1 align="center"> NG-Arab :heart_eyes: </h1>
+
 <div align="center">
 
 [![NG-Arab-Logo][ng-logo]](https://ng-arab.tech)
+
 </div>
 
 <div align="center">
 
 > مجتمع عربى يضم مطورين من جميع أنحاء الوطن العربى من خلال منصات التواصل الاجتماعى المختلفة
+
 </div>
 
 <p align="center">
@@ -18,14 +21,11 @@
  · 
 <a href="https://www.youtube.com/c/AngularArmy">Youtube</a>
 </p>
- 
-
 
 
 <!-- Table of Content -->
 
-##  <h2 align="right">  الفهرس :clipboard: </h2>
-
+## <h2 align="right"> الفهرس :clipboard: </h2>
 
 <details open="open" dir='rtl'>
   <summary>الفهرس</summary>
@@ -40,10 +40,9 @@
   </ol>
 </details>
 
-
 <!-- ABOUT -->
-## <h2 align="right" id="Who-We-Are"> من نحن :wave: </h2>
 
+## <h2 align="right" id="Who-We-Are"> من نحن :wave: </h2>
 
 [![NG-Arab-Team][ng-about]](https://ng-arab.tech)
 
@@ -54,8 +53,8 @@
 مجتمع عربى يضم مطورين من جميع أنحاء الوطن العربى من خلال منصات التواصل الاجتماعى المختلفة
 </div>
 
-
 <!-- Why NG-Arab -->
+
 ## <h2 align="right" id="Why-Ng-Arab"> ليه عملنا ng-arab :sunglasses: </h2>
 
 <p align="right" dir="rtl">
@@ -68,33 +67,32 @@
  كما يهدف إلى مساعدة المطورين العرب على الارتقاء بأنفسهم بشكل أعمق و على نطاق أوسع من محدودية   التكنولوجيا التى يستخدمونها أثناء تأدية أعمالهم    
 </p>
 
-
 <!-- Feature -->
+
 ## <h2 align="right" id="NG-Provide"> بنعمل اية وبنقدم اية :handshake: </h2>
 
 <p align="right" dir="rtl">
 الويب سيت هيساعد المبرمجين علي اقامة محاكاة interview عن طريق اسئلة وتطوير مبرمج العربي عن اقمة live interview عن طريق zoom  واقامة محاكاة live interview وان طريقة الاسئلة تسساعد المبرمج العربي علي  معرفة اخطاء و تطوير نفسة واعادة ال interview مرة اخري للوصل level  اعلي . 
 </p>
 
-
 <p align="right" dir="rtl">
 تقديم كل ما يساعد ويفيد ويحتاجة المبرمج العربي – من خلال مجموعة الفيس ستجدنا بنساعد في حل الكثير من المشاكل بالإضافة لتقديم النصائح والمحتوى المتميز وأيضا موقعنا والذي بدأنا فيه بعمل محاكاة للمقابلات الوظيفية سواء مقابلة اشخاص أو أختبارات تحدد مستواك ومدى إستعدادك وتقييمك للوقوف على نقاط الضعف التى تحتاج التركيز عليها لتطوير خبراتك ومهاراتك لتكون مستعدا دائما 
 </p>
 
-
 <!-- Roadmap -->
+
 ## <h2 align="right" id="NG-Roadmap"> هنعمل اية في المستقبل :eyes: </h2>
 
- 
 <ul align="right"  dir='rtl'>
 <li> نخلص كل حاجة في اسئلة interview </li> 
 <li> نبداء باقامة live interview with zoom  </li> 
 <li> اقامة جزء جديد في الموقع الوظائف </li> 
 <li> إقامة جزء جديد الكورسات </li> 
 </ul>
- 
+
 
 <!-- Courses -->
+
 ## <h2 align="right" id="NG-Courses"> ما قدمة المجتمع حتي الان :muscle: </h2>
 
 <div align="right"  dir='rtl'>
@@ -106,6 +104,7 @@
 </div>
 
 <!-- Support -->
+
 ## <h2 align="right" id="Show-Your-Support"> اظهر دعمك :star: </h2>
 
 <p align="right" dir="rtl">
@@ -113,12 +112,12 @@
 </p>
 
 <!-- License -->
+
 ## <h2 align="right" id="NG-license"> رخصة المشروع :memo: </h2>
 
-<p align="right" dir="rtl">هذا المشروع تحت رخصة [MIT License](LICENSE).</p>
+<p align="right" dir="rtl">هذا المشروع تحت رخصة [MIT License](https://github.com/NgArab/NgArab/blob/main/LICENSE).</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[ng-logo]: .github/images/ngArab-logo.png 
+
+[ng-logo]: .github/images/ngArab-logo.png
 [ng-about]: .github/images/about-ngArab.png
-
-
