@@ -1,38 +1,38 @@
 {
   "targets": {
-    "ng-arab": {
+    "liqaa-muslim-user": {
       "hosting": {
         "user": [
-          "ng-arab"
+          "liqaa-muslim-user"
         ]
       }
     },
-    "user-tst": {
+    "test-liqaa-muslim-user": {
       "hosting": {
         "user": [
-          "user-tst"
+          "test-liqaa-muslim-user"
         ]
       }
     },
-    "admin-tst": {
+    "test-liqaa-muslim-admin": {
       "hosting": {
         "admin": [
-          "admin-tst"
+          "test-liqaa-muslim-admin"
         ]
       }
     },
-    "admin-ng-arab": {
+    "liqaa-muslim-admin": {
       "hosting": {
         "admin": [
-          "admin-ng-arab"
+          "liqaa-muslim-admin"
         ]
       }
     }
   },
   "projects": {
-    "admin-production": "admin-ng-arab",
-    "admin-testing": "admin-tst",
-    "user-testing": "user-tst",
-    "user-production": "ng-arab"
+    "admin-production": "test-liqaa-muslim-admin",
+    "admin-testing": "liqaa-muslim-admin",
+    "user-testing": "test-liqaa-muslim-user",
+    "user-production": "liqaa-muslim-user"
   }
 }
