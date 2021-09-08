@@ -7,7 +7,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { PageNotfoundComponent } from './pages/page-notfound/page-notfound.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { PageNotfoundComponent } from './pages/page-notfound/page-notfound.compo
     AboutComponent,
     HeaderComponent,
     FooterComponent,
-    PageNotfoundComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
