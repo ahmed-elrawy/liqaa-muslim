@@ -1,0 +1,22 @@
+<table class="table table-hover ">
+    <thead>
+        <tr>
+            <th scope="col" [class.buff_Sala]="buff_Sala === 'Fajr'" class="table__column-odd-first-row">Fajr <br>{{remaning_total_time}} </th>
+            <th scope="col" [class.buff_Sala]="buff_Sala === 'Dhuhr'" class="table__column-even-first-row ">Dhuhr</th>
+            <th scope="col" [class.buff_Sala]="buff_Sala === 'Asr'" class="table__column-odd-first-row">Asr</th>
+            <th scope="col" [class.buff_Sala]="buff_Sala === 'Maghrib'" class="table__column-even-first-row ">Maghrib</th>
+            <th scope="col" [class.buff_Sala]="buff_Sala === 'Isha'" class="table__column-odd-first-row">Isha</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="data">
+            <td [class.buff_Sala]="buff_Sala === 'Fajr'" class="table__column-odd-second-row">{{data.Fajr}}</td>
+            <td [class.buff_Sala]="buff_Sala === 'Dhuhr'" class="table__column-even-second-row">{{data.Dhuhr}}</td>
+            <td [class.buff_Sala]="buff_Sala === 'Asr'" class="table__column-odd-second-row">{{data.Asr}}</td>
+            <td [class.buff_Sala]="buff_Sala === 'Maghrib'" class="table__column-even-second-row">{{data.Maghrib}}</td>
+            <td [class.buff_Sala]="buff_Sala === 'Isha'" class="table__column-odd-second-row">{{data.Isha}}</td>
+
+        </tr>
+
+    </tbody>
+</table>
