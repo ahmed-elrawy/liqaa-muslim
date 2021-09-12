@@ -1,0 +1,67 @@
+.about {
+  padding-top: 60PX;
+  padding-bottom: 30px;
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  &__item {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+    &:after {
+      content: '';
+      background-color: var(--main--color);
+      position: absolute;
+      top: 85px;
+      left: 0;
+      right: 0;
+      height: 80px;
+      z-index: -1;
+    }
+  }
+  &__image {
+    width: 250px;
+    height: 250px;
+    border: 4px solid var(--main--color);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+  &__details {
+    text-align: center;
+  }
+  &__name {
+    font-size: 26px;
+    font-family: var(--font-poppins);
+  }
+  &__job {
+    color: var(--main--color);
+    font-size: 16px;
+    font-family: var(--font-poppins);
+    margin-bottom: 10px;
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    margin-left: 10px;
+  }
+  &__icon {
+    width: 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about__body {
+    justify-content: center;
+  }
+}
