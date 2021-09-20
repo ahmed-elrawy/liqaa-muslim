@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './core/pages/home/home.component';
 import { AboutComponent } from './core/pages/about/about.component';
@@ -13,7 +14,9 @@ import { DatePipe } from '@angular/common';
   declarations: [AppComponent, HomeComponent, AboutComponent, HeaderComponent, FooterComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
 ],
   providers: [DatePipe],
   bootstrap: [AppComponent],
