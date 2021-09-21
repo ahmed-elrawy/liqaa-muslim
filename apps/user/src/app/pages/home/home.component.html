@@ -1,0 +1,54 @@
+<div class="classes">
+  <div class="container">
+    <div class="classes__inner">
+      <h1 class="classes__title">
+        لقاء مسلم
+      </h1>
+      <div class="classes__items">
+        <div class="classes__item classes__item--active" (click)="open=!open">
+          <div class="classes__img">
+            <img src="../../../assets/001-quran.svg" alt="تحفيظ">
+          </div>
+          <p>تحفيظ</p>
+        </div>
+        <div class="classes__item">
+          <div class="classes__img">
+            <img src="../../../assets/002-muslim.svg" alt="تفسير">
+          </div>
+          <p>تفسير</p>
+        </div>
+        <div class="classes__item">
+          <div class="classes__img">
+            <img src="../../../assets/003-muslim-1.svg" alt="تجويد">
+          </div>
+          <p>تجويد</p>
+        </div>
+        <div class="classes__item">
+          <div class="classes__img">
+            <img src="../../../assets/001-praying.svg" alt="تجويد">
+          </div>
+          <p>تجويد</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="classes__overlay"></div>
+  <div class="classes__spec" *ngIf="open">
+    <form [formGroup]="classForm">
+      <div class="classes__form-input">
+        <input type="number" placeholder="عمر الطالب" formControlName="age">
+        <p *ngIf="classForm.get('age')?.touched&&classForm.get('age')?.errors?.required">برجاء ادخال سن الطالب</p>
+        <p *ngIf="classForm.get('age')?.touched&&classForm.get('age')?.errors?.max">لا يجب ان يزيد السن عن 100 عام</p>
+        <select formControlName="gender">
+          <option>ذكر</option>
+          <option>انثى</option>
+        </select>
+        <p *ngIf="classForm.get('gender')?.touched&&classForm.get('gender')?.errors?.required">يجب تحديد جنس الطالب</p>
+      </div>
+      <div class="classes__form-btn">
+        <a [routerLink]="['/sessions',classForm.get('age')?.value,classForm.get('gender')?.value]" >اذهب للمحاضرات</a>
+        <button type="button" (click)="open=!open">اغلق القائمة</button>
+      </div>
+    </form>
+  </div>
+</div>
