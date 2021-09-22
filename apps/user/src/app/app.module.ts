@@ -1,4 +1,4 @@
-
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, HeaderComponent, FooterComponent, NotFoundComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule],
