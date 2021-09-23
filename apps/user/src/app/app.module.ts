@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,7 +14,9 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [AppComponent, HomeComponent, AboutComponent, HeaderComponent, FooterComponent, NotFoundComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule],
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
