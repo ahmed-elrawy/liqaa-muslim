@@ -16,6 +16,10 @@ body {
   font-family: var(--main-font);
 }
 
+:focus {
+  outline: none;
+}
+
 .container {
   width: 100%;
   padding-left: 15px;
