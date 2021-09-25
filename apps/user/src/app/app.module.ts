@@ -8,16 +8,21 @@ import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MawakeetElsalahComponent } from './pages/mawakeet-elsalah/mawakeet-elsalah.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, HeaderComponent, FooterComponent, NotFoundComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, HeaderComponent, FooterComponent, NotFoundComponent, MawakeetElsalahComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule],
-  providers: [],
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

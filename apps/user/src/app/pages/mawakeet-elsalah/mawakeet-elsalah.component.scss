@@ -1,0 +1,51 @@
+
+
+.salwat {
+  display: flex;
+  justify-content: center;
+  direction: ltr;
+  &__item {
+
+  color: var(--main-color);
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  font-size: small;
+  font-weight: 120  ;
+}
+
+  &__row {
+    &__cell{
+      width: 65px;
+      &--odd-first {
+        background-color: #92d2c8
+      }
+      &--even-first{
+        background-color: #cee1de
+      }
+      &--odd-second {
+        background-color: #b1dfd8
+      }
+      &--even-second {
+        background-color: #dceae7
+      }
+
+    }
+    &__first-adjust{
+      font-size: 10px;
+      padding: 0;
+      padding-bottom: 12px;
+      max-height: 12px;
+    }
+    &__second-adjust{
+    padding: 7% 0 7% 0; 
+  }
+  }
+
+  
+}
+    
+    
+    
+
+
