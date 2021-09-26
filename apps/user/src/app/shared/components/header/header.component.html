@@ -1,1 +1,49 @@
-<p>header works!</p>
+<header class="header">
+  <div class="container">
+    <div class="header__info">
+      <div class="header__logo">
+        <img src="./assets/images/header-images/jamea.png" alt="image">
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__li">
+            <a class="header__link"
+              routerLink="/home"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}"
+            >الرئيسيه</a>
+          </li>
+          <li class="header__li">
+            <a
+              routerLink="/session"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}"
+            >المحاضرات</a>
+          </li>
+          <li class="header__li">
+            <a
+              routerLink="/teacher"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}"
+            >المعلمين</a>
+          </li>
+          <li class="header__li">
+            <a
+              routerLink="/team"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}"
+            >من نحن</a>
+          </li>
+        </ul>
+        <div class="header__donation-button">
+          <button><i class="fas fa-hand-holding-usd"></i>تبرع الآن</button>
+        </div>
+      </nav>
+      <div class="header__buttons">
+        <button>دخول</button>
+        <button>تسجيل</button>
+      </div>
+    </div>
+  </div>
+
+</header>
