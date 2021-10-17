@@ -1,0 +1,87 @@
+// _placeholder
+%buttonStyle {
+  button {
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    padding: 5px;
+    width: 90px;
+    cursor: pointer;
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+%displayFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:focus {
+  outline: none;
+}
+
+.header {
+  background-color: #eee;  //<-- This for testing
+  padding: 10px 0px;
+  &__info {
+    @extend %displayFlex;
+  }
+  &__logo {
+    img {
+      max-width: 60%;
+      height: auto;
+    }
+  }
+  &__nav {
+    @extend %displayFlex;
+  }
+  &__list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+  &__li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      color: var(--main-color);
+      &:hover {
+        opacity: .7;
+        border-bottom: 2px solid var(--main-color);
+      }
+    }
+  }
+  &__link {
+    border-bottom: 2px solid var(--main-color);
+  }
+  &__donation-button {
+    margin-right: 20px;
+    @extend %buttonStyle;
+      i {
+        color: var(--bg-color);
+        margin-left: 5px;
+      }
+  }
+  &__buttons {
+    @extend %buttonStyle;
+    button:first-child {
+      margin-left: 10px;
+    }
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  .header__info {
+    justify-content: center;
+  }
+}
+

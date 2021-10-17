@@ -47,6 +47,7 @@
     "@angular/router": "12.1.0",
     "@ckeditor/ckeditor5-angular": "^2.0.1",
     "@ckeditor/ckeditor5-build-classic": "^29.0.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@ngrx/effects": "12.4.0",
     "@ngrx/store": "12.4.0",
     "@ngrx/store-devtools": "12.4.0",

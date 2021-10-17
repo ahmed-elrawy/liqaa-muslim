@@ -51,7 +51,7 @@
             "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "apps/admin/src/styles.scss"
+              "apps/admin/src/styles.scss", "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
           },
@@ -234,7 +234,7 @@
             "tsConfig": "apps/user/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/user/src/favicon.ico", "apps/user/src/assets"],
-            "styles": ["apps/user/src/styles.scss"],
+            "styles": ["apps/user/src/styles.scss", "node_modules/@fortawesome/fontawesome-free/css/all.min.css"],
             "scripts": []
           },
           "configurations": {

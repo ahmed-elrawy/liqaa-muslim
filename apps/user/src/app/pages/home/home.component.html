@@ -7,25 +7,25 @@
       <div class="classes__items">
         <div class="classes__item classes__item--active" (click)="open=!open">
           <div class="classes__img">
-            <img src="../../../assets/001-quran.svg" alt="تحفيظ">
+            <img src="assets/images/classes/001-quran.svg" alt="تحفيظ">
           </div>
           <p>تحفيظ</p>
         </div>
         <div class="classes__item">
           <div class="classes__img">
-            <img src="../../../assets/002-muslim.svg" alt="تفسير">
+            <img src="assets/images/classes/002-muslim.svg" alt="تفسير">
           </div>
           <p>تفسير</p>
         </div>
         <div class="classes__item">
           <div class="classes__img">
-            <img src="../../../assets/003-muslim-1.svg" alt="تجويد">
+            <img src="assets/images/classes/003-muslim-1.svg" alt="تجويد">
           </div>
           <p>تجويد</p>
         </div>
         <div class="classes__item">
           <div class="classes__img">
-            <img src="../../../assets/001-praying.svg" alt="تجويد">
+            <img src="assets/images/classes/001-praying.svg" alt="تجويد">
           </div>
           <p>تجويد</p>
         </div>
@@ -36,18 +36,24 @@
   <div class="classes__spec" *ngIf="open">
     <form [formGroup]="classForm">
       <div class="classes__form-input">
-        <input type="number" placeholder="عمر الطالب" formControlName="age">
-        <p *ngIf="classForm.get('age')?.touched&&classForm.get('age')?.errors?.required">برجاء ادخال سن الطالب</p>
-        <p *ngIf="classForm.get('age')?.touched&&classForm.get('age')?.errors?.max">لا يجب ان يزيد السن عن 100 عام</p>
-        <select formControlName="gender">
-          <option>ذكر</option>
-          <option>انثى</option>
-        </select>
-        <p *ngIf="classForm.get('gender')?.touched&&classForm.get('gender')?.errors?.required">يجب تحديد جنس الطالب</p>
+        <div class="classes__form-input-inner">
+          <input type="number" placeholder="عمر الطالب" formControlName="age">
+          <p *ngIf="classForm.get('age')?.touched&&classForm.get('age')?.errors?.required">برجاء ادخال سن الطالب</p>
+          <p *ngIf="classForm.get('age')?.touched&&classForm.get('age')?.errors?.max">لا يجب ان يزيد السن عن 100 عام</p>
+        </div>
+
+        <div class="classes__form-input-inner">
+          <select formControlName="gender">
+            <option>ذكر</option>
+            <option>انثى</option>
+          </select>
+          <p *ngIf="classForm.get('gender')?.touched&&classForm.get('gender')?.errors?.required">يجب تحديد جنس الطالب
+          </p>
+        </div>
       </div>
       <div class="classes__form-btn">
-        <a [routerLink]="['/sessions',classForm.get('age')?.value,classForm.get('gender')?.value]" >اذهب للمحاضرات</a>
-        <button type="button" (click)="open=!open">اغلق القائمة</button>
+        <a [routerLink]="['/sessions',classForm.get('age')?.value,classForm.get('gender')?.value]">اذهب للمحاضرات</a>
+        <button class="classes__close-form" type="button" (click)="open=!open">اغلق القائمة</button>
       </div>
     </form>
   </div>
