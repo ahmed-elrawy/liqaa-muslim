@@ -1,7 +1,7 @@
 <!-- Salawat -->
-<section class="">
-  <div class="container">
-    <div class="salwat">
+<section class="" >
+  <div class="container" >
+    <div class="salwat" >
       <div class="salwat__item"  *ngFor="let sala of this.salawatAPI |  keyvalue: originalOrder let i = index" >
         <!-- salawat names row -->
         <div class="salwat__row">
@@ -11,14 +11,14 @@
         </div>
         <!-- salawat time row -->
         <div class="salwat__row__cell  salwat__row__first-adjust" [ngClass]="i%2 === 0 ? 'salwat__row__cell--odd-first' : 'salwat__row__cell--even-first'" 
-        [ngStyle]="{'display': buff_Sala === sala?.key  ? 'block' : 'none' }">
-        {{sala.value}}
-      </div>
+          [ngStyle]="{'display': buff_Sala === sala?.key  ? 'block' : 'none' }">
+          {{sala.value}}
+        </div>
         <!-- salawat time and remaning time row -->
         <div class="salwat__row__cell salwat__row__second-adjust"
-        [ngClass]="i%2 === 0 ? 'salwat__row__cell--odd-second' : 'salwat__row__cell--even-second'">
-        {{ buff_Sala === sala?.key ?remaning_total_time: sala.value }}
-    </div>
+          [ngClass]="i%2 === 0 ? 'salwat__row__cell--odd-second' : 'salwat__row__cell--even-second'">
+          {{ buff_Sala === sala?.key ?remaning_total_time: sala.value }}
+        </div>
     
       </div>
     </div>

@@ -26,6 +26,9 @@
       "tags": [],
       "implicitDependencies": ["admin"]
     },
+    "api": {
+      "tags": []
+    },
     "user": {
       "tags": []
     },

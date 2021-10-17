@@ -100,9 +100,12 @@ getNearst(){
    }
 
   for (let key in salawat) {
-        
-   if (salawat[key] > this.curr_time){
+    
 
+
+        // معاد الصلاه اكبر من الوقت الحالي 
+   if (salawat[key] > this.curr_time  ){
+        console.log(salawat[key])
       if(salawat[key]-this.curr_time<buff_time){
 
         buff_time =salawat[key]-this.curr_time
@@ -111,7 +114,10 @@ getNearst(){
       }
     } else 
      {
-      if (this.curr_time > salawat.Isha && salawat[key]-this.curr_time +24 <buff_time ) {
+
+      if (this.curr_time > salawat.العشاء && salawat[key]-this.curr_time +24 <buff_time ) {
+        console.log(salawat[key])
+        console.log(this.curr_time)
         if(salawat[key]-this.curr_time + 24 <buff_time){
           buff_time =salawat[key]-this.curr_time
           this.buff_Sala = key
