@@ -2,6 +2,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -12,16 +13,25 @@ import { MawakeetElsalahComponent } from './pages/mawakeet-elsalah/mawakeet-elsa
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 
-
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, HeaderComponent, FooterComponent, NotFoundComponent, MawakeetElsalahComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    HeaderComponent,
+    FooterComponent,
+    NotFoundComponent,
+    MawakeetElsalahComponent,
+  ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule,
+    RouterModule,
+    HttpClientModule,
     FormsModule,
+    AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
   ],
+
   providers: [DatePipe],
   bootstrap: [AppComponent],
 })
