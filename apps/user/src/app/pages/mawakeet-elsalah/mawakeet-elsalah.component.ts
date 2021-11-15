@@ -3,7 +3,7 @@ import { DatePipe, KeyValue } from '@angular/common';
 import { MawakeetElsalahService } from '../../shared/services/mawakeet-elsalah.service';
 
 @Component({
-  selector: 'ng-arab-mawakeet-elsalah',
+  selector: 'mawakeet-elsalah',
   templateUrl: './mawakeet-elsalah.component.html',
   styleUrls: ['./mawakeet-elsalah.component.scss']
 })
@@ -100,9 +100,11 @@ getNearst(){
    }
 
   for (let key in salawat) {
-        
-   if (salawat[key] > this.curr_time){
+    
 
+
+   if (salawat[key] > this.curr_time  ){
+        console.log(salawat[key])
       if(salawat[key]-this.curr_time<buff_time){
 
         buff_time =salawat[key]-this.curr_time
@@ -111,7 +113,10 @@ getNearst(){
       }
     } else 
      {
-      if (this.curr_time > salawat.Isha && salawat[key]-this.curr_time +24 <buff_time ) {
+
+      if (this.curr_time > salawat.العشاء && salawat[key]-this.curr_time +24 <buff_time ) {
+        console.log(salawat[key])
+        console.log(this.curr_time)
         if(salawat[key]-this.curr_time + 24 <buff_time){
           buff_time =salawat[key]-this.curr_time
           this.buff_Sala = key
