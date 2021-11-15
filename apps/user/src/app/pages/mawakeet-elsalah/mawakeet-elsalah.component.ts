@@ -3,7 +3,7 @@ import { DatePipe, KeyValue } from '@angular/common';
 import { MawakeetElsalahService } from '../../shared/services/mawakeet-elsalah.service';
 
 @Component({
-  selector: 'ng-arab-mawakeet-elsalah',
+  selector: 'mawakeet-elsalah',
   templateUrl: './mawakeet-elsalah.component.html',
   styleUrls: ['./mawakeet-elsalah.component.scss']
 })
@@ -103,7 +103,6 @@ getNearst(){
     
 
 
-        // معاد الصلاه اكبر من الوقت الحالي 
    if (salawat[key] > this.curr_time  ){
         console.log(salawat[key])
       if(salawat[key]-this.curr_time<buff_time){
