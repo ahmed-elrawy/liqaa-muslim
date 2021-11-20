@@ -42,29 +42,7 @@
   }
   &__link {
       margin-left: 10px;
-      &:hover {
-        opacity: .7
-      }
     }
-  &__icon{
-      // font-size: 25px;
-      color: #fff;
-      border: none;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      text-align: center;
-      border-radius: 50%;
-      &--facebook {
-        background-color: #4267B2;
-      }
-      &--twitter {
-        background-color: #1DA1F2;
-      }
-      &--youtube {
-        background-color: #FF0000;
-      }
-  }
   &__copyright {
     margin-top: 25px;
     background-color: var(--main-color);
@@ -73,8 +51,6 @@
     width: 100%;
     padding: 15px 0px;
   }
-
-
 }
 
 

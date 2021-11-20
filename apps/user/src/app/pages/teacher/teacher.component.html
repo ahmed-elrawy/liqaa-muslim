@@ -1,0 +1,72 @@
+<section>
+  <div class="container">
+    <div class="teacher">
+      <div class="teacher__body" *ngFor='let teacher of teacher'>
+        <div class="teacher__box">
+          <div class="teacher__item">
+            <img class="teacher__img" src="assets\images\team\badr.jpg" alt="{{ teacher?.name }}">
+
+            <!-- Start Social -->
+            <ul class="teacher__social">
+              <li class="teacher__social-li">
+                <a class="about__link" href="{{ teacher?.social?.facebook }}" target="_blank">
+                  <i class="icons icons--facebook fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="teacher__social-li">
+                <a class="about__link" href="{{ teacher?.social?.linkedin }}" target="_blank">
+                  <i class="icons icons--linkedin fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="teacher__social-li">
+                <a class="about__link" href="{{ teacher?.social?.behance }}" target="_blank">
+                  <i class="icons icons--youtube fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+            <!-- End Social -->
+          </div>
+
+          <!-- Start Details -->
+          <div class="teacher__details">
+            <h3 class="teacher__name">
+              {{ teacher?.name }}
+            </h3>
+            <h4 class="teacher__specialty">
+              <span class="teacher__specialty--span">
+                التخصص: 
+              </span>
+              {{ teacher?.specialty }}
+            </h4>
+            <h4 class="teacher__student">
+              <span class="teacher__specialty--span">
+                عدد الطلاب: 
+              </span>
+              {{ teacher?.student }}
+            </h4>
+          </div>
+          <!-- End Details -->
+        </div>
+        
+        <div class="teacher__booking">
+          <button class="btns">
+            احجز مكانك
+          </button>
+        </div>
+        
+        <!-- Start Review -->
+        <div class="teacher__review">
+          <div class="teacher__review-item">
+            <i class="teacher__review-icon fas fa-star"></i>
+            <i class="teacher__review-icon fas fa-star"></i>
+            <i class="teacher__review-icon fas fa-star"></i>
+            <i class="teacher__review-icon fas fa-star"></i>
+            <i class="teacher__review-icon fas fa-star"></i>
+          </div>
+        </div>
+        <!-- End Review -->
+      </div>
+    </div>
+  </div>
+</section>
+
